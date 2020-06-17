@@ -1,8 +1,8 @@
-package br.com.cartoes.controllers;
+package br.com.cartoes.pagamento.controllers;
 
-import br.com.cartoes.dtos.PagamentoDTO;
-import br.com.cartoes.models.Pagamento;
-import br.com.cartoes.services.PagamentoService;
+import br.com.cartoes.pagamento.dtos.PagamentoDTO;
+import br.com.cartoes.pagamento.models.Pagamento;
+import br.com.cartoes.pagamento.services.PagamentoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;

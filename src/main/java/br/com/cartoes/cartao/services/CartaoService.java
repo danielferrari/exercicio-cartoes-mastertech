@@ -1,14 +1,13 @@
-package br.com.cartoes.services;
+package br.com.cartoes.cartao.services;
 
-import br.com.cartoes.dtos.CartaoDTO;
-import br.com.cartoes.models.Cartao;
-import br.com.cartoes.models.Cliente;
-import br.com.cartoes.repositories.CartaoRepository;
-import br.com.cartoes.repositories.ClienteRepository;
+import br.com.cartoes.cartao.dtos.CartaoDTO;
+import br.com.cartoes.cartao.models.Cartao;
+import br.com.cartoes.cliente.models.Cliente;
+import br.com.cartoes.cartao.repositories.CartaoRepository;
+import br.com.cartoes.cliente.repositories.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.validation.ConstraintViolationException;
 import java.util.Optional;
 
 @Service

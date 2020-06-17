@@ -1,7 +1,6 @@
-package br.com.cartoes.models;
+package br.com.cartoes.cartao.models;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.context.properties.bind.DefaultValue;
+import br.com.cartoes.cliente.models.Cliente;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;

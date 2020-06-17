@@ -1,6 +1,6 @@
-package br.com.cartoes.repositories;
+package br.com.cartoes.pagamento.repositories;
 
-import br.com.cartoes.models.Pagamento;
+import br.com.cartoes.pagamento.models.Pagamento;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

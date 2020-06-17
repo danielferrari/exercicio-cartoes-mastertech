@@ -1,10 +1,10 @@
-package br.com.cartoes.services;
+package br.com.cartoes.pagamento.services;
 
-import br.com.cartoes.dtos.PagamentoDTO;
-import br.com.cartoes.models.Cartao;
-import br.com.cartoes.models.Pagamento;
-import br.com.cartoes.repositories.CartaoRepository;
-import br.com.cartoes.repositories.PagamentoRepository;
+import br.com.cartoes.pagamento.dtos.PagamentoDTO;
+import br.com.cartoes.cartao.models.Cartao;
+import br.com.cartoes.pagamento.models.Pagamento;
+import br.com.cartoes.cartao.repositories.CartaoRepository;
+import br.com.cartoes.pagamento.repositories.PagamentoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

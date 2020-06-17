@@ -1,9 +1,9 @@
-package br.com.cartoes.controllers;
+package br.com.cartoes.cartao.controllers;
 
-import br.com.cartoes.dtos.CartaoAtivarDTO;
-import br.com.cartoes.dtos.CartaoDTO;
-import br.com.cartoes.models.Cartao;
-import br.com.cartoes.services.CartaoService;
+import br.com.cartoes.cartao.dtos.CartaoAtivarDTO;
+import br.com.cartoes.cartao.dtos.CartaoDTO;
+import br.com.cartoes.cartao.models.Cartao;
+import br.com.cartoes.cartao.services.CartaoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

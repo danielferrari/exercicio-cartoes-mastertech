@@ -1,4 +1,6 @@
-package br.com.cartoes.models;
+package br.com.cartoes.pagamento.models;
+
+import br.com.cartoes.cartao.models.Cartao;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;

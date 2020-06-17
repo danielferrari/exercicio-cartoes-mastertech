@@ -1,4 +1,4 @@
-package br.com.cartoes.dtos;
+package br.com.cartoes.cartao.dtos;
 
 public class CartaoAtivarDTO {
     private boolean ativar;

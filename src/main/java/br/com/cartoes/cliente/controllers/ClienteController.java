@@ -1,7 +1,7 @@
-package br.com.cartoes.controllers;
+package br.com.cartoes.cliente.controllers;
 
-import br.com.cartoes.models.Cliente;
-import br.com.cartoes.services.ClienteService;
+import br.com.cartoes.cliente.models.Cliente;
+import br.com.cartoes.cliente.services.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

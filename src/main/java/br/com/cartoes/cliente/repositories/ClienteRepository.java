@@ -1,6 +1,6 @@
-package br.com.cartoes.repositories;
+package br.com.cartoes.cliente.repositories;
 
-import br.com.cartoes.models.Cliente;
+import br.com.cartoes.cliente.models.Cliente;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

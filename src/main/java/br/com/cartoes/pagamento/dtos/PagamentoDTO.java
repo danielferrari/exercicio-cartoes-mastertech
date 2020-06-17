@@ -1,4 +1,4 @@
-package br.com.cartoes.dtos;
+package br.com.cartoes.pagamento.dtos;
 
 import java.math.BigDecimal;
 
