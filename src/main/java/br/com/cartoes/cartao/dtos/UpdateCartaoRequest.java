@@ -1,6 +1,6 @@
 package br.com.cartoes.cartao.dtos;
 
-public class CartaoAtivarDTO {
+public class UpdateCartaoRequest {
     private boolean ativar;
 
     public boolean getAtivar() {

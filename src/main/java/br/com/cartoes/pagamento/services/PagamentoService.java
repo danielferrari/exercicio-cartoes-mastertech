@@ -1,7 +1,8 @@
 package br.com.cartoes.pagamento.services;
 
-import br.com.cartoes.pagamento.dtos.PagamentoDTO;
+import br.com.cartoes.pagamento.dtos.PagamentoRequest;
 import br.com.cartoes.cartao.models.Cartao;
+import br.com.cartoes.pagamento.exceptions.CartaoNotFoundException;
 import br.com.cartoes.pagamento.models.Pagamento;
 import br.com.cartoes.cartao.repositories.CartaoRepository;
 import br.com.cartoes.pagamento.repositories.PagamentoRepository;
@@ -21,17 +22,17 @@ public class PagamentoService {
     private CartaoRepository cartaoRepository;
 
 
-    public Pagamento create(PagamentoDTO pagamentoDTO) {
-        Optional<Cartao> cartaoOptional = cartaoRepository.findById(pagamentoDTO.getCartaoId());
+    public Pagamento create(PagamentoRequest pagamentoRequest) {
+        Optional<Cartao> cartaoOptional = cartaoRepository.findById(pagamentoRequest.getCartaoId());
 
         if (!cartaoOptional.isPresent()) {
-             throw new RuntimeException("Cartão não encontrado");
+             throw new CartaoNotFoundException();
         }
 
         Pagamento pagamento = new Pagamento();
         pagamento.setCartao(cartaoOptional.get());
-        pagamento.setDescricao(pagamentoDTO.getDescricao());
-        pagamento.setValor(pagamentoDTO.getValor());
+        pagamento.setDescricao(pagamentoRequest.getDescricao());
+        pagamento.setValor(pagamentoRequest.getValor());
 
         return pagamentoRepository.save(pagamento);
     }

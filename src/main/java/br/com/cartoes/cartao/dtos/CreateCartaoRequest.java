@@ -1,6 +1,6 @@
 package br.com.cartoes.cartao.dtos;
 
-public class CartaoDTO {
+public class CreateCartaoRequest {
     private Integer clienteId;
     private String numero;
 

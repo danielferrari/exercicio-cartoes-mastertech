@@ -1,6 +1,6 @@
 package br.com.cartoes.pagamento.controllers;
 
-import br.com.cartoes.pagamento.dtos.PagamentoDTO;
+import br.com.cartoes.pagamento.dtos.PagamentoRequest;
 import br.com.cartoes.pagamento.models.Pagamento;
 import br.com.cartoes.pagamento.services.PagamentoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ public class PagamentoController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Pagamento create(@RequestBody @Validated PagamentoDTO pagamento) {
+    public Pagamento create(@RequestBody @Validated PagamentoRequest pagamento) {
         return pagamentoService.create(pagamento);
     }
 

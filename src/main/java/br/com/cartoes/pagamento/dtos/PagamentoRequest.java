@@ -2,7 +2,7 @@ package br.com.cartoes.pagamento.dtos;
 
 import java.math.BigDecimal;
 
-public class PagamentoDTO {
+public class PagamentoRequest {
     private Integer cartaoId;
     private String descricao;
     private BigDecimal valor;

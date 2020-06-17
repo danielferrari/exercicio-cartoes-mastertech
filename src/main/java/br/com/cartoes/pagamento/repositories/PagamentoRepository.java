@@ -9,6 +9,5 @@ import java.util.List;
 
 @Repository
 public interface PagamentoRepository extends CrudRepository<Pagamento, Integer> {
-    @Query(value = "SELECT * FROM pagamento WHERE cartao_id = ?1", nativeQuery = true)
     List<Pagamento> findByCartaoId(Integer cartaoId);
 }
