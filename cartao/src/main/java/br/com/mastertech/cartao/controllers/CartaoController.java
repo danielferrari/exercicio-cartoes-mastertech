@@ -1,6 +1,7 @@
 package br.com.mastertech.cartao.controllers;
 
 import br.com.mastertech.cartao.dtos.CreateCartaoRequest;
+import br.com.mastertech.cartao.dtos.GetCartaoResponse;
 import br.com.mastertech.cartao.dtos.UpdateCartaoRequest;
 import br.com.mastertech.cartao.mappers.CartaoMapper;
 import br.com.mastertech.cartao.models.Cartao;
@@ -17,6 +18,9 @@ public class CartaoController {
     @Autowired
     private CartaoService cartaoService;
 
+    @Autowired
+    private CartaoMapper cartaoMapper;
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Cartao create(@RequestBody @Valid CreateCartaoRequest cartaoRequest) {
@@ -25,8 +29,9 @@ public class CartaoController {
     }
 
     @GetMapping("/{numero}")
-    public Cartao get(@PathVariable String numero) {
-        return cartaoService.get(numero);
+    public GetCartaoResponse get(@PathVariable String numero) {
+        Cartao cartao = cartaoService.get(numero);
+        return cartaoMapper.toGetCartaoResponse(cartao);
     }
 
     @PatchMapping("/{numero}")
