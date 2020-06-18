@@ -23,17 +23,13 @@ public class CartaoService {
     ClienteClient clienteClient;
 
     public Cartao create(Cartao cartao) {
-        try {
-            clienteClient.getById(cartao.getClienteId());
-        } catch(FeignException.NotFound ex) {
-            throw new ClienteNotValidException();
-        }
-
         Optional<Cartao> findByNumero = cartaoRepository.findByNumero(cartao.getNumero());
 
         if (findByNumero.isPresent()) {
             throw new CartaoAlreadyExistsException();
         }
+
+        clienteClient.getById(cartao.getClienteId());
 
         return cartaoRepository.save(cartao);
     }
