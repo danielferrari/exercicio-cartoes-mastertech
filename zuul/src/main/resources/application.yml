@@ -1,0 +1,19 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: zuul
+
+zuul:
+  routes:
+    cartao:
+      path: /cartao/**
+      serviceId: cartao
+    cliente:
+      path: /cliente/**
+      serviceId: cliente
+    pagamento:
+      path: /pagamento/**
+      serviceId: pagamento
+
