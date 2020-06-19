@@ -16,4 +16,11 @@ zuul:
     pagamento:
       path: /pagamento/**
       serviceId: pagamento
+    cep:
+      path: /cep/**
+      url: http://viacep.com.br/ws
+
+ribbon:
+  ConnectTimeOut: 10000
+  ReadTimeout: 10000
 
